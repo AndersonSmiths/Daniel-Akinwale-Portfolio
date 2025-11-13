@@ -13,7 +13,7 @@ title_separator          : "-"
 subtitle                 : 
 name                     : Daniel Akinwale
 description              : Daniel Akinwale - Projects and CV 
-baseurl                  : "/portfolio-daniel-akinwale" # Set this to "portfolio-<your-github-username>"
+baseurl                  : "" # Empty for root URL
 url                      : "https://andersonsmiths.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 
 # Theme and Style
