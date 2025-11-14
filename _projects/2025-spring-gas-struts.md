@@ -2,25 +2,26 @@
 layout: project
 title: Gas Struts
 description: Struts chosen and used to prop up completed Aeroshell project
-technologies: [Autodesk Fusion360, 3D Printing]
+technologies: [Solidworks, 3D Printing]
 image: /assets/images/gas-struts.jpg
 category: hyperloop
 ---
 
-For a class, we were asked to CAD a complex object. This design was...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec accumsan leo. Pellentesque ornare orci enim, vitae vestibulum nibh rutrum in. Donec pharetra risus nec ipsum fringilla, et mattis tortor auctor. Duis tortor ante, posuere ut odio a, scelerisque interdum purus. Aenean faucibus luctus est, sed bibendum tellus. 
+After designing the aeroshell and knowing what size we intended it to be, we started thinking about how to mount it to the chassis. In the past it was bolted at two positions on both sides of the chassis. The issue with this is that when taking the pod to competition it is hard to work on compenents inside that need attention and to show the internal hardware. It requires the shell be completely removed, placed somewhere it won't be disturbed, then placed back afterwards.
 
-Nulla et magna urna. Morbi a ipsum sollicitudin, rhoncus risus volutpat, ultricies nunc. Quisque mollis finibus ante id imperdiet. Quisque vehicula elit sit amet felis facilisis fermentum.
+Brainstorming with the overall mechanical  
+![Force Calculation FBD]({{ "/assets/images/force-calc-fbd.jpg" | relative_url }}){: .inline-image-r style="width: 40%"}
+team, we took inspiration from the gas struts that hold up the trunk door of a car and decided it ws a solution worth implementing. I began figuring out how to implement it by; first, doing load calculations on the aeroshell based on how much it weighed, where the strut would need to be mounted, and where it would contact the aeroshell.  
 
-![Shaded rendering of earlier version]({{ "/assets/images/radio-machine.jpg" | relative_url }}){: .inline-image-r style="width: 200px"}
+I determined we could use
+![Gas Strut CAD]({{ "/assets/images/gas-strut-cad.jpg" | relative_url }}){: .inline-image-r style="width: 40%"}
+hinges to attach to the flat "skirt" section of the aeroshell to the brackets that had been machined in semesters prior. Each gas strut would sit on top of the bracket and the other end would contact a 3D printed piece that was made to conform to the shape of the aeroshell at that point. This way, the hinge would allow a 45 degree rotation from close to open position and the gas strut would be activated once pulled outward and upward; thus, holding open the aeroshell like a car trunk door. All that would be left is a latch on the opposite side of the aeroshell to hold it down and oppose the force of the struts when it is in the closed position.
+![Weight and Force Calculations]({{ "/assets/images/weight-force-calcs.jpg" | relative_url }}){: .inline-image-1 style="width: 100%"}  
+- Moment Balance
+    - Fs (Spring Force) = 32 N (x3 springs)
+    - Fs (Spring Force) = 8 lbf (x3 springs)  
 
-Nulla et magna urna. Morbi a ipsum sollicitudin, rhoncus risus volutpat, ultricies nunc. Quisque mollis finibus ante id imperdiet. Quisque vehicula elit sit amet felis facilisis fermentum.
-
-Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
-
-I was inspired by this old radio when I made this rendering:
-
-![Photo of old radio]({{ "/assets/images/old-radio.jpg" | relative_url }}){: .inline-image-l}
-
-Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
-
-Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
+Took these calculations and purchased gas struts according to these specifications. Bought two rubber latches for the opposite side to be able to oppose 24 lb of force. 3D printed pieces that conformed to contour of aeroshell. Ensured screws went through 
+![Gas Strut Apparatus]({{ "/assets/images/gas-strut-irl.jpg" | relative_url }}){: .inline-image-r style="width: 40%"}
+3D printed piece normal to surface of aeroshell.
+![Rubber Latch]({{ "/assets/images/rubber-latch.jpg" | relative_url }}){: .inline-image-r style="width: 38.5%"}
