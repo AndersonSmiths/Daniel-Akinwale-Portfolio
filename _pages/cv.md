@@ -8,8 +8,8 @@ permalink: /cv/
 [Download my Resume]({{ "/assets/Resume.pdf" | relative_url }}) in PDF format.
 
 
-**Email:** [dda38@cornell.edu](mailto:dda38@cornell.edu) | | | **Phone:** [+1 (856) 562-5495](tel:+18565625495)
-
+**Email:** [dda38@cornell.edu](mailto:dda38@cornell.edu)  
+**Phone:** [+1 (856) 562-5495](tel:+18565625495)  
 **LinkedIn:** [Click Here](https://www.linkedin.com/in/daniel-akinwale-894297202/){:target="_blank" rel="noopener"}
 
 ---
