@@ -120,3 +120,10 @@ Final Issues:
 - Crack in large shell
 We hope that these changes will lead to a smoother fabrication process and easier curing. We are also leaving documentation for future members of our team about the fabrication process and papers on work we have done that were submitted to competition. Find below the white paper written by myself and other Mechanical Team Leads about our work up until March of 2025.
 
+<div class="text-center mb-5 pb-4 border-bottom border-secondary">
+    <div class="mt-4">
+        <a href="{{ "/assets/24-25_Aeroshell_WhitePaper.pdf" | relative_url }}" class="btn btn-light btn-lg px-4" target="_blank">
+        <i class="bi bi-file-earmark-pdf me-2"></i>Spring 2024-45 Aeroshell White Paper
+        </a>
+    </div>
+</div>
