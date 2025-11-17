@@ -63,7 +63,7 @@ Reasoning:
 
 **Milestone 2: Mobility**  
 Teams must demonstrate that their robot can move forward and backward 
-![Milestone 2 Mobility]({{ "/assets/images/cube-craze-milestone2.png" | relative_url }}){: .inline-image-r style="width: 175px"}
+![Milestone 2 Mobility]({{ "/assets/images/cube-craze-milestone2.jpg" | relative_url }}){: .inline-image-r style="width: 175px"}
 specified distances, and make both left and right turns.  
 Robot must:
 1. Drive forward 1 foot
@@ -79,7 +79,7 @@ Robot must:
 9. Stop
 
 **Milestone 3: Border Sensing & Color Detection**  
-![Milestone 3 Border Sensing & Color Detection]({{ "/assets/images/cube-craze-milestone3.png" | relative_url }}){: .inline-image-r style="width: 400px"}
+![Milestone 3 Border Sensing & Color Detection]({{ "/assets/images/cube-craze-milestone3.jpg" | relative_url }}){: .inline-image-r style="width: 400px"}
 Teams must demonstrate that their robot can detect the current color of the robot’s location and the edges of the board. To accomplish this, the team’s robot must drive on a narrow a blue and yellow track, immediately stop when it hits the other color, turn 180 degrees, drive to the back of the starting color, and stop again. 
 The robot must remain on the board at all times. A TA will randomly choose which color the robot starts on, the orientation of the robot and how far away the robot is 
 from the other color. The robot must be able to independently determine which color it is on (the team will not be allowed to change code, 
@@ -87,7 +87,7 @@ they know which color the robot starts on).
 
 **Milestone 4: Cube Clearing**  
 Teams must demonstrate to that their robot can gather cubes. At the beginning of the milestone, there will be 10 cubes on each side of the board, randomly scattered  
-![Milestone 4 Cube Clearing]({{ "/assets/images/cube-craze-milestone4.png" | relative_url }}){: .inline-image-r style="width: 225px"}
+![Milestone 4 Cube Clearing]({{ "/assets/images/cube-craze-milestone4.jpg" | relative_url }}){: .inline-image-r style="width: 225px"}
 within the middle third of the field. To complete the milestone, the robot must gather at least 5 cubes within one minute. A TA will randomly choose the color therobot starts on. The robot will start centered at the back of the board (touching the black line), but the team may choose their desired starting orientation, much like the actual competition.
 
 **Team LeBot's Performance**   

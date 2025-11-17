@@ -25,7 +25,7 @@ In my capacity as an employee and now as a manager in the Sibley School of Mecha
 ## MLS Work
 
 **Studio Manager**  
-![Bridgeport Mill]({{ "/assets/images/bridgeport.png" | relative_url }}){: .inline-image-1 style="width: 250px"}
+![Bridgeport Mill]({{ "/assets/images/bridgeport.jpg" | relative_url }}){: .inline-image-1 style="width: 250px"}
 ![Older Lathe]({{ "/assets/images/old-lathe.jpg" | relative_url }}){: .inline-image-1 style="width: 315px"}
 
 The mill and lathe are the two primary tools that we instruct students to use. Our shop has 3 levels: red, green, and blue apron (in that order). We instruct students to create a lamp by fabricating the base on the mill, and the stem on the lathe. The stem screws into the base and the students are given the top of the lamp. They will also be introduced to the belt sander at the end of the 2.5 hour training. With the red apron students are allowed
