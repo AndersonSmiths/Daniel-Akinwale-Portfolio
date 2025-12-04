@@ -28,7 +28,8 @@ Aspiring mechanical engineer with a strong foundation in CAD, machining, and tea
 
 #### Education
 - **Cornell University**  
-  *Bachelor of Science in Mechanical and Aerospace Engineering | M.Eng Mechanical Engineering*  
+  *Bachelor of Science in Mechanical and Aerospace Engineering*  
+  *M.Eng Mechanical Engineering*  
   Graduation: May 2026  
 
 - **Williamstown High School**  
