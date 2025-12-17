@@ -11,7 +11,7 @@ category: coursework
 
 As part of MAE 4272: Fluids & Heat Transfer Laboratory, our team was tasked with designing, modeling, and experimentally testing a small-scale wind turbine blade intended to maximize aerodynamic power output while remaining structurally and operationally safe. The project was motivated by a prior blade failure observed in the lab, requiring our design to balance aerodynamic efficiency with conservative limits on stress, rotational speed, and manufacturability. The final blade needed to operate safely across a realistic range of wind speeds while providing measurable power output in a controlled wind tunnel environment.
 
-## Small Scale Wind Turbine Blade Design  
+## Wind Turbine Blade Design Project  
 
 **Design Process**  
 
