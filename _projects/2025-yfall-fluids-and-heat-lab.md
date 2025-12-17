@@ -19,7 +19,7 @@ Our design process was model-driven and iterative. Using airfoil performance dat
 
 **Testing Summary**  
 The final blade was evaluated experimentally in a wind tunnel using a torque brake to generate power curves at multiple fixed wind speeds. Instead of operating at a single target RPM, we swept applied torque from free rotation to stall at each wind speed, measuring rotational speed and torque to compute power output. This approach allowed us to
-![3D designed magnet holder]({{ "/assets/images/powercurves.jpg" | relative_url }}){: .inline-image-r style="width: 100%"}
+![3D designed magnet holder]({{ "/assets/images/powercurves.jpg" | relative_url }}){: .inline-image-r style="width: 55%"}
  capture the full operating envelope of the blade and directly compare experimental performance to model predictions. While the blade did not achieve the predicted peak power, testing revealed consistent trends in power generation and stall behavior, providing valuable insight into aerodynamic limitations and model assumptions.
 
 **My Contribution**  
