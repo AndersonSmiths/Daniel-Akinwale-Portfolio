@@ -40,15 +40,63 @@ Aspiring mechanical engineer with a strong foundation in CAD, machining, and tea
 
 #### Skills
 - **Software:** SolidWorks, Autodesk Fusion 360, ANSYS, Microsoft Office Suite, MATLAB, Python
-- **Tools:** 3D Printing, Laser Cutting, Lathes, Mills, CNC Machining, Vertical & Horizontal Saws, Hand Tools, etc.
+- **Tools:** 3D Printing, Laser Cutting, Lathes, Mills, HAAS CNC Machines, Vertical & Horizontal Saws, Hand Tools, etc.
 - **Languages:** Yoruba, English
 
 ---
 
+#### Work Experience
+
+- **Cornell MAE Manufacturing Learning Studio**  
+  *Shop Manager*  
+  February 2024 - Present 
+
+- **Cornell Hyperloop**  
+  *Composites Subteam Lead*  
+  January 2023 - Present  
+
+- **GlobalFoundries**  
+  *Photolithography Equipment Engineering Intern*  
+  June 2025 - August 2025
+
+- **SRW Engineering & Architecture**  
+  *Mechanical Engineering Intern*  
+  May 2024 - August 2024
+
+- **Millenial Pool Management**   
+  *Lifeguard Auditor*  
+  May 2024 - August 2024  
+  *Pool Technician*  
+  February 2024 - March 2024  
+  *Lifeguard*  
+  Summer 2022, Summer 2023, Summer 2024
+
+- **Pandora**  
+  *Seller & Greeter*  
+  March 2022 - June 2022
+
+- **Monalisia Cucina Rustica Italiana**  
+  *Busser*  
+  December 2020 - September 2021
+
+- **The VMC Group**  
+  *Intern*  
+  June 2021 - August 2021
+
+- **Tesla Motors**  
+  *Mentee/Intern*  
+  June 2021 - August 2021
+
+- **Hospitality Creek & Campground**  
+  *Lifeguard*  
+  August 2020 - November 2020
+
+
+---
+
 #### Extracurricular Activities
-- Manager of MAE Manufacturing Learning Studio
-- Composites Subteam Lead of Cornell Hyperloop
-- Member of National Society of Black Engineers
+- National Society of Black Engineers
+- Cornell Boxing Club
 - Cornell Maker Club
 - Cornell Rock Climbing Club
 - Cornell Ski & Snowboard Club

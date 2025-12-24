@@ -10,5 +10,5 @@ Names for Project Tile Images:
 /assets/images/hub-personal.jpg
 /assets/images/hub-all.jpg
 
-Sometimes things don't show up because you need to reload the entire thing.
-- Go to Teminal -> New Terminal -> Type in: bundle exec jekyll serve
+Sometimes things don't show up because you need to reload the entire thing:
+- Go to Terminal -> New Terminal -> Type in: bundle exec jekyll serve
