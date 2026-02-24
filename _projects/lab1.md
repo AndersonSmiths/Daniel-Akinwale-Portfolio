@@ -12,54 +12,48 @@ This lab was divided into two parts, Lab 1A, covering the Arduino IDE and progra
 
 ## Lab 1A - 1  
 
-<div class="video-wrap">
-  <video class="video" controls preload="metadata" playsinline>
+<div style="max-width: 680px; margin: 20px 0;">
+  <video controls preload="metadata" playsinline style="width: 100%; height: auto; border-radius: 12px;">
     <source src="{{ '/assets/videos/lab1a1.mp4' | relative_url }}" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </div>
 
 ## Lab 1A - 2  
 
-<div class="video-wrap">
-  <video class="video" controls preload="metadata" playsinline>
+<div style="max-width: 680px; margin: 20px 0;">
+  <video controls preload="metadata" playsinline style="width: 100%; height: auto; border-radius: 12px;">
     <source src="{{ '/assets/videos/lab1a2.mp4' | relative_url }}" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </div>
 
 ## Lab 1A - 3  
 
-<div class="video-wrap">
-  <video class="video" controls preload="metadata" playsinline>
+<div style="max-width: 680px; margin: 20px 0;">
+  <video controls preload="metadata" playsinline style="width: 100%; height: auto; border-radius: 12px;">
     <source src="{{ '/assets/videos/lab1a3.mp4' | relative_url }}" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </div>
 
 ## Lab 1A - 4  
 
-<div class="video-wrap">
-  <video class="video" controls preload="metadata" playsinline>
+<div style="max-width: 680px; margin: 20px 0;">
+  <video controls preload="metadata" playsinline style="width: 100%; height: auto; border-radius: 12px;">
     <source src="{{ '/assets/videos/lab1a4.mp4' | relative_url }}" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </div>
 
 ## Lab 1A - 5  
 
-<div class="video-wrap">
-  <video class="video" controls preload="metadata" playsinline>
+<div style="max-width: 680px; margin: 20px 0;">
+  <video controls preload="metadata" playsinline style="width: 100%; height: auto; border-radius: 12px;">
     <source src="{{ '/assets/videos/lab1a5.mp4' | relative_url }}" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </div>
 
 ## Lab 1A - 6 (5000-Level Students)  
 
-<div class="video-wrap">
-  <video class="video" controls preload="metadata" playsinline>
+<div style="max-width: 680px; margin: 20px 0;">
+  <video controls preload="metadata" playsinline style="width: 100%; height: auto; border-radius: 12px;">
     <source src="{{ '/assets/videos/lab1a6.mp4' | relative_url }}" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 </div>
