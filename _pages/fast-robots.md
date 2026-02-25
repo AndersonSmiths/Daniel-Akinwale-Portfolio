@@ -9,13 +9,12 @@ permalink: /projects/coursework/fast-robots/
 </div>
 
 ![Profile Picture]({{ "assets/images/profile-pic.jpg" | relative_url }}){: class="profile-image"}{: .inline-image-1 style="width: 100%"}  
-![Gas Strut Assembly]({{ "/assets/images/profile-pic.jpg" | relative_url }}){: .inline-image-1 style="width: 30%"}  
 
 ---
 
 #### Objective
-This course is meant as a bridge between hardware and software. The goal here, for me at least is to learn as much as possible about Python and C as possible,
-and hopefully take home some important lessons and skills that will be invaluable in the future to come.
+This course is meant as a bridge between hardware and software. The goal here, for me at least is to learn as much as possible about Python and C/C++ as possible,
+and hopefully take home some important lessons and skills that will be invaluable in the future to come. From C
 
 
 ---

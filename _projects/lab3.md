@@ -1,9 +1,9 @@
 ---
 layout: project
-title: Lab 2
+title: Lab 3
 description: 
 technologies: [VS Code, GitHub, Arduino, Python, Jupyter Notebook, Redboard Arduino Nano]
-image: /assets/images/lab2-car.jpg
+image: /assets/images/lab3-solder.jpg
 category: fast-robots-labs
 ---
 
