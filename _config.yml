@@ -14,7 +14,7 @@ subtitle                 :
 name                     : Daniel Akinwale
 description              : Daniel Akinwale - Projects and CV 
 baseurl                  : "" # Empty for root URL
-url                      : "https://danielakinwale.com" # the base hostname & protocol for your site
+url                      : "https://dami20047.github.io/FastRobots/" # the base hostname & protocol for your site
 
 # Theme and Style
 theme: jekyll-theme-minimal
