@@ -13,7 +13,7 @@ permalink: /cv/
   </div>
 
   <div class="mt-4">
-    <a href="{{ "/assets/Resume.pdf" | relative_url }}" class="btn btn-light btn-lg px-4" target="_blank">
+    <a href="{{ "/assets/Resume_Akinwale.pdf" | relative_url }}" class="btn btn-light btn-lg px-4" target="_blank">
       <i class="bi bi-file-earmark-pdf me-2"></i>View PDF Resume
     </a>
   </div>
