@@ -2,7 +2,7 @@
 layout: project
 title: Aeroshell
 description: Design and fabrication of airfoil/shroud for overall pod
-technologies: [Solidworks, CNC Milling, Composite Materials]
+technologies: [Solidworks, Sanding Tools, CNC Milling, Composite Materials, ]
 image: /assets/images/aeroshell.jpg
 category: hyperloop
 ---
