@@ -120,10 +120,23 @@ Final Issues:
 - Crack in large shell
 We hope that these changes will lead to a smoother fabrication process and easier curing. We are also leaving documentation for future members of our team about the fabrication process and papers on work we have done that were submitted to competition. Find below the white paper written by myself and other Mechanical Team Leads about our work up until March of 2025.
 
+**Current Changes (Spring 2026):**  
+This semester we have changed from doing a positive mold to a negative mold like I talked about in the future considerations from before.
+- Think of it as space outside of shell instead of inside  
+Further changes:  
+- Not completely made of foam
+    - Nose made of foam because of curvature
+    - Using ribs made of plywood with wood planks that will be sanded smooth to creat curvature along length of aeroshell's body.
+    - Because this is a new concept and we are not taking our pod to competition this year we are simply working on this as a proof of conceept and underclassmen will take over the full-size 6.5 ft long fabrication next semester
+    - This semester we are just fabricating the prototype which will be about 2-2.5 ft long
+- New paper will be written post-prototyping  
+![Aeroshell]({{ "/assets/images/negative-prototype1.jpg" | relative_url }}){: .inline-image-1 style="width: 60%"}
+![Aeroshell]({{ "/assets/images/negative-prototype2.jpg" | relative_url }}){: .inline-image-1 style="width: 37.25%"}  
+
 <div class="text-center mb-5 pb-4 border-bottom border-secondary">
     <div class="mt-4">
         <a href="{{ "/assets/24-25_Aeroshell_WhitePaper.pdf" | relative_url }}" class="btn btn-light btn-lg px-4" target="_blank">
-        <i class="bi bi-file-earmark-pdf me-2"></i>Spring 2024-45 Aeroshell White Paper
+        <i class="bi bi-file-earmark-pdf me-2"></i>Spring 2024-25 Aeroshell White Paper
         </a>
     </div>
 </div>
