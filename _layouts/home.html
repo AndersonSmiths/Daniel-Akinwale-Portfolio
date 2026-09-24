@@ -47,17 +47,16 @@
   @media (prefers-reduced-motion: reduce) { .ready .scroll-cue { animation: none; } }
 
   .site-nav { position: absolute; top: 20px; right: var(--name-x); display: flex; gap: 24px; z-index: 2; }
-  .site-nav a, .about-links a {
+  .site-nav a {
     font-family: var(--display); color: var(--fg); text-decoration: none; font-size: 17px;
     border-bottom: 2px solid transparent; transition: border-color .2s, color .2s;
   }
-  .site-nav a:hover, .about-links a:hover { color: var(--accent); border-color: var(--accent); }
-  .about-links { display: flex; gap: 28px; margin-top: 28px; flex-wrap: wrap; }
+  .site-nav a:hover { color: var(--accent); border-color: var(--accent); }
 
   /* ---------- about ---------- */
   .about {
     min-height: 100vh; display: grid; align-items: center;
-    padding: 96px var(--name-x);
+    padding: 48px var(--name-x);
   }
   .about-inner {
     display: grid; grid-template-columns: minmax(220px, 400px) minmax(0, 620px);
@@ -103,10 +102,6 @@
     <div>
       <p class="label">about</p>
       {{ content }}
-      <div class="about-links">
-        <a href="{{ '/projects/' | relative_url }}">view projects &rarr;</a>
-        <a href="{{ '/cv/' | relative_url }}">view cv &rarr;</a>
-      </div>
     </div>
   </div>
 </section>
@@ -117,6 +112,15 @@ const hero = document.getElementById("hero");
 GearIntro.mount(document.getElementById("intro"), {
   onLayout: (l) => document.documentElement.style.setProperty("--name-x", l.x + "px"),
   onDone: () => hero.classList.add("ready")
+});
+
+// down arrow: scroll so the about section sits centered on screen
+document.querySelector(".scroll-cue").addEventListener("click", (e) => {
+  e.preventDefault();
+  const inner = document.querySelector(".about-inner").getBoundingClientRect();
+  // center it; if it's taller than the screen, line its top up just below the edge instead
+  const offset = inner.height < window.innerHeight ? (window.innerHeight - inner.height) / 2 : 24;
+  window.scrollTo({ top: window.scrollY + inner.top - offset, behavior: "smooth" });
 });
 </script>
 </body>
