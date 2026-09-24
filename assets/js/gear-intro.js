@@ -23,8 +23,10 @@
     wrench: ["#c7ced6", "#9aa4ae", "#e2e6ea"],            // steel
     wrenchShare: 0.35,
     lastScale: 0.6,        // last name size relative to first name
-    suffix: ".com",        // tiny text after the last name (shown once the letters go solid)
+    suffix: ".com",        // tiny text after the last name; bounces in from the right once the letters are solid
     suffixScale: 0.18,     // suffix size relative to the last name
+    suffixColor: "#e0524c", // red, to match the accents
+    suffixHop: 1.2,        // bounce height, relative to the last-name size
     leftMargin: 0.04,      // name's left edge, as a fraction of screen width
     sizeScale: 0.5625,     // overall name size multiplier
     onLayout: null,        // called with { x, firstSize, lastSize, bottom } after each layout
@@ -40,6 +42,7 @@
   const T_SOLID = T_BURST + 1.75;    // parts fade into solid letters
   const SPHERE_W = 2.6;              // sphere spin speed (rad/s)
   const SOLID_FADE = 0.6;
+  const SUFFIX_DUR = 1.3;   // .com bounce from the right edge to its spot
   const W_MAX = 6.5;        // gear spin speed at end of spin-up (rad/s)
 
   const rand = (a, b) => a + Math.random() * (b - a);
@@ -114,14 +117,14 @@
         g.font = `400 ${fs2}px ${O.font}`; g.lineWidth = fs2 * strokeK;
         g.fillText(O.last, nameX, base2); g.strokeText(O.last, nameX, base2);
         if (!which && O.suffix) {
-          const sx = nameX + g.measureText(O.last).width + fs2 * 0.03, s3 = Math.max(7, fs2 * O.suffixScale);
-          g.font = `400 ${s3}px ${O.font}`; g.lineWidth = s3 * strokeK;
-          g.fillText(O.suffix, sx, base2); g.strokeText(O.suffix, sx, base2);
+          sufX = nameX + g.measureText(O.last).width + fs2 * 0.03;
+          sufSize = Math.max(7, fs2 * O.suffixScale);
+          g.font = `400 ${sufSize}px ${O.font}`; sufW = g.measureText(O.suffix).width;
         }
       }
       g.restore();
     }
-    let nameX = 0, base1 = 0, base2 = 0, fs2 = 0, gap2 = 0;
+    let nameX = 0, base1 = 0, base2 = 0, fs2 = 0, gap2 = 0, sufX = 0, sufSize = 0, sufW = 0;
 
     function samplePoints(drawFn, step) {
       const o = document.createElement("canvas"); o.width = W; o.height = H;
@@ -296,7 +299,7 @@
       if (canvas.getBoundingClientRect().bottom <= 0) { last = now; raf = requestAnimationFrame(frame); return; }
       const dt = Math.min(0.05, (now - (last || now)) / 1000); last = now;
       const t = skip ? 99 : (now - t0) / 1000;
-      if (t > T_SOLID + SOLID_FADE && !doneFired) { doneFired = true; skip = true; O.onDone && O.onDone(); }
+      if (t > T_SOLID + SOLID_FADE && !doneFired) { doneFired = true; O.onDone && O.onDone(); }
 
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -370,6 +373,21 @@
           ctx.drawImage(textLayer, 0, 0);
         }
         ctx.globalAlpha = 1;
+      }
+
+      // ".com" hops in from beyond the right edge once the letters are solid
+      const ts = t - (T_SOLID + SOLID_FADE);
+      if (O.suffix && ts > 0) {
+        const u = Math.min(1, ts / SUFFIX_DUR);
+        const startX = W + 4;
+        const x = startX + (sufX - startX) * (1 - Math.pow(1 - u, 2));
+        const hop = Math.abs(Math.sin(Math.PI * 4 * u)) * fs2 * O.suffixHop * Math.pow(1 - u, 1.4);   // 4 shrinking hops
+        ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+        ctx.font = `400 ${sufSize}px ${O.font}`;
+        ctx.textBaseline = "alphabetic"; ctx.textAlign = "left";
+        ctx.fillStyle = O.suffixColor;
+        ctx.fillText(O.suffix, x, base2 - hop);
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
       }
       raf = requestAnimationFrame(frame);
     }

@@ -1,3 +1,8 @@
+---
+# Homepage. "permalink: /" makes Jekyll publish this file as the site's front page.
+permalink: /
+title: Daniel Akinwale
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +34,7 @@
     font-family: var(--display); font-weight: 400; color: var(--muted);
     opacity: 0; transform: translateY(8px); transition: opacity .9s ease, transform .9s ease;
   }
-  .tagline .role { display: block; color: var(--fg); font-size: clamp(20px, 2.2vw, 28px); margin-bottom: 4px; }
+  .tagline .role { display: block; color: var(--accent); font-size: clamp(20px, 2.2vw, 28px); margin-bottom: 4px; }
   .tagline .fields { display: block; font-size: clamp(14px, 1.35vw, 18px); letter-spacing: .02em; }
   .tagline .sep { color: var(--accent); padding: 0 .35em; }
 
@@ -101,7 +106,11 @@
     <img class="headshot" src="{{ '/assets/images/headshot.jpg' | relative_url }}" alt="Headshot of Daniel Akinwale">
     <div>
       <p class="label">about</p>
-      {{ content }}
+      <!-- about text: edit the headline and paragraphs here -->
+      <h2>I turn designs into hardware that works.</h2>
+      <p>I'm a mechanical engineer focused on manufacturing: the fixtures, machines, and processes that take a part from CAD to the shop floor. I earned my B.S. in Mechanical and Aerospace Engineering at Cornell University and am finishing my M.Eng there this December.</p>
+      <p>Most recently I was a Fluids Manufacturing Intern at Vast in Long Beach, where I supported orbital tube welding and nonconformance work for tube production, redesigned the 3D-printed weld support fixtures that became the standard process, and built a new higher-cleanliness tube-proofing setup.</p>
+      <p>My hands-on work spans composites, CNC machining, semiconductor fabrication, and aerospace isolation systems, plus teaching students to run everything from laser cutters to 5-axis mills in Cornell's Manufacturing Learning Studio.</p>
     </div>
   </div>
 </section>
