@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f12; --fg: #ece8df; --muted: #8a939e; --accent: #e0524c; --line: #2a2f36;
+    --display: "Ribeye", Georgia, serif;
+    --mono: "Courier New", Courier, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --name-x: 4vw;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; height: 100vh; height: 100svh; overflow: hidden; }
+  #intro { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: pan-y; }
+  .tagline {
+    position: absolute; left: var(--name-x); bottom: 112px; margin: 0;
+    font-family: var(--display); font-weight: 400; color: var(--muted);
+    opacity: 0; transform: translateY(8px); transition: opacity .9s ease, transform .9s ease;
+  }
+  .tagline .role { display: block; color: var(--fg); font-size: clamp(20px, 2.2vw, 28px); margin-bottom: 4px; }
+  .tagline .fields { display: block; font-size: clamp(14px, 1.35vw, 18px); letter-spacing: .02em; }
+  .tagline .sep { color: var(--accent); padding: 0 .35em; }
+
+  .scroll-cue {
+    position: absolute; left: 50%; bottom: 28px; width: 52px; height: 52px; margin-left: -26px;
+    border: 2px solid var(--fg); border-radius: 50%; color: var(--fg);
+    display: grid; place-items: center; text-decoration: none;
+    opacity: 0; transition: opacity .9s ease, border-color .2s, color .2s;
+  }
+  .scroll-cue svg { width: 24px; height: 24px; }
+  .scroll-cue:hover, .scroll-cue:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+  .ready .tagline { opacity: 1; transform: none; }
+  .ready .scroll-cue { opacity: 1; animation: bounce 1.8s ease-in-out infinite; }
+  @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+  @media (prefers-reduced-motion: reduce) { .ready .scroll-cue { animation: none; } }
+
+  .site-nav { position: absolute; top: 20px; right: var(--name-x); display: flex; gap: 24px; z-index: 2; }
+  .site-nav a, .about-links a {
+    font-family: var(--display); color: var(--fg); text-decoration: none; font-size: 17px;
+    border-bottom: 2px solid transparent; transition: border-color .2s, color .2s;
+  }
+  .site-nav a:hover, .about-links a:hover { color: var(--accent); border-color: var(--accent); }
+  .about-links { display: flex; gap: 28px; margin-top: 28px; flex-wrap: wrap; }
+
+  /* ---------- about ---------- */
+  .about {
+    min-height: 100vh; display: grid; align-items: center;
+    padding: 96px var(--name-x);
+  }
+  .about-inner {
+    display: grid; grid-template-columns: minmax(220px, 400px) minmax(0, 620px);
+    gap: clamp(32px, 6vw, 96px); align-items: center;
+  }
+  .headshot {
+    width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;
+    border-radius: 14px; border: 1px solid var(--line);
+  }
+  .about .label { font-family: var(--display); font-weight: 400; letter-spacing: .04em; color: var(--accent); font-size: 15px; margin: 0 0 16px; }
+  .about h2 { font-family: var(--display); font-weight: 400; font-size: clamp(26px, 3vw, 38px); line-height: 1.2; margin: 0 0 24px; }
+  .about p { font-size: 17px; line-height: 1.7; color: #c9ccd1; margin: 0 0 18px; max-width: 62ch; }
+
+  @media (max-width: 760px) {
+    .about { padding-top: 72px; }
+    .about-inner { grid-template-columns: 1fr; }
+    .headshot { max-width: 320px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero" id="hero">
+  <canvas id="intro" aria-label="daniel akinwale"></canvas>
+  <p class="tagline">
+    <span class="role">engineer</span>
+    <span class="fields">mechanical<span class="sep">&middot;</span>manufacturing<span class="sep">&middot;</span>aerospace</span>
+  </p>
+  <a class="scroll-cue" href="#about" aria-label="Scroll to about">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 4v15"/><path d="M5 12l7 7 7-7"/>
+    </svg>
+  </a>
+  <nav class="site-nav">
+    <a href="{{ '/projects/' | relative_url }}">projects</a>
+    <a href="{{ '/cv/' | relative_url }}">cv</a>
+  </nav>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <img class="headshot" src="{{ '/assets/images/headshot.jpg' | relative_url }}" alt="Headshot of Daniel Akinwale">
+    <div>
+      <p class="label">about</p>
+      {{ content }}
+      <div class="about-links">
+        <a href="{{ '/projects/' | relative_url }}">view projects &rarr;</a>
+        <a href="{{ '/cv/' | relative_url }}">view cv &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{ '/assets/js/gear-intro.js' | relative_url }}"></script>
+<script>
+const hero = document.getElementById("hero");
+GearIntro.mount(document.getElementById("intro"), {
+  onLayout: (l) => document.documentElement.style.setProperty("--name-x", l.x + "px"),
+  onDone: () => hero.classList.add("ready")
+});
+</script>
+</body>
+</html>

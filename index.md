@@ -1,28 +1,12 @@
 ---
-layout: default
-title: Daniel Akinwale Portfolio
+layout: home
+title: Daniel Akinwale
 ---
 
-## About Me
+## I turn designs into hardware that works.
 
+I'm a mechanical engineer focused on manufacturing: the fixtures, machines, and processes that take a part from CAD to the shop floor. I earned my B.S. in Mechanical and Aerospace Engineering at Cornell University and am finishing my M.Eng there this December.
 
-![Profile Picture]({{ "assets/images/profile-pic.jpg" | relative_url }}){: class="profile-image"}
+Most recently I was a Fluids Manufacturing Intern at Vast in Long Beach, where I supported orbital tube welding and nonconformance work for tube production, redesigned the 3D-printed weld support fixtures that became the standard process, and built a new higher-cleanliness tube-proofing setup.
 
-My name is Daniel Akinwale, and I am senior studying mechanical engineering at Cornell University. On campus I work in the Sibley School of Mechanical and Aerospace Engineering as a manager of the Manufacturing Learning Studio. I teach students to use all sorts of machining tools like: laser cutters, 5-axis CNC mills, benchtop CNC mills, water jets, mills, lathes, vertical and horizontal saws, sanding tools, hand tools, etc. I have interned at SRW Engineering & Architecture as a Mechanical Engineering Intern as well as at GlobalFoundries as an Advanced Manufacturing Equipment Engineering Intern in the Photolithography Department.
-
-I am detail-oriented with knowledge of design, prototyping, and process development. I’m eager to lend my combined knowledge and skills to enhance business performance. I operate well in both individual and team capacities, leveraging seasoned work ethic to quickly adapt to different processes and drive project objectives. I’m resourceful and results-driven with a passion for growth and the desire to increase the value of both my projects and myself.
-
----
-
-<!-- Styled navigation buttons - Updated by Daniel Akinwale -->
-<div class="mt-4 mb-4 text-center">
-  <h4 class="mb-4 text-white">Explore My Work</h4>
-  <div class="d-flex gap-3 justify-content-center flex-wrap">
-    <a href="{{ "/projects/" | relative_url }}" class="btn btn-lg btn-light" style="min-width: 200px;">
-      <i class="bi bi-folder-fill me-2"></i>View Projects
-    </a>
-    <a href="{{ "/cv/" | relative_url }}" class="btn btn-lg btn-light" style="min-width: 200px;">
-      <i class="bi bi-file-earmark-text-fill me-2"></i>View CV
-    </a>
-  </div>
-</div>
+My hands-on work spans composites, CNC machining, semiconductor fabrication, and aerospace isolation systems, plus teaching students to run everything from laser cutters to 5-axis mills in Cornell's Manufacturing Learning Studio.

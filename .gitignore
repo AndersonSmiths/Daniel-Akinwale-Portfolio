@@ -32,3 +32,6 @@ Gemfile.lock
 
 # VS Code specific settings
 .vscode/
+
+# Claude preview files (not part of the site)
+Claude outputs/
