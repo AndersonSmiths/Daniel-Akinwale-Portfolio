@@ -23,6 +23,8 @@
     wrench: ["#c7ced6", "#9aa4ae", "#e2e6ea"],            // steel
     wrenchShare: 0.35,
     lastScale: 0.6,        // last name size relative to first name
+    suffix: ".com",        // tiny text after the last name (shown once the letters go solid)
+    suffixScale: 0.18,     // suffix size relative to the last name
     leftMargin: 0.04,      // name's left edge, as a fraction of screen width
     sizeScale: 0.5625,     // overall name size multiplier
     onLayout: null,        // called with { x, firstSize, lastSize, bottom } after each layout
@@ -31,8 +33,9 @@
 
   // timeline (seconds)
   const T_SPIN = 1.7;       // gear forms and spins up
-  const T_EXPLODE = T_SPIN + 0.8;   // gear blows apart across the screen
-  const T_GATHER = T_EXPLODE + 0.8;  // pieces pull into a sphere in the center
+  const T_EXPLODE = T_SPIN + 0.9;   // gear blows apart out to the screen edges
+  const HOLD = 0.2;                  // pieces hang at the edges for a moment
+  const T_GATHER = T_EXPLODE + HOLD + 0.8;  // pieces pull into a sphere in the center
   const T_BURST = T_GATHER + 1.0;    // sphere spins, then pieces stream into the name
   const T_SOLID = T_BURST + 1.75;    // parts fade into solid letters
   const SPHERE_W = 2.6;              // sphere spin speed (rad/s)
@@ -92,7 +95,7 @@
     const solidLayer = document.createElement("canvas");
     const tctx = textLayer.getContext("2d"), hctx = holeLayer.getContext("2d"), sctx = solidLayer.getContext("2d");
 
-    let W, H, DPR, cx, cy, fs, gap, hoverR, gearR = 100, parts = [];
+    let W, H, DPR, cx, cy, fs, gap, hoverR, gearR = 100, pieceScale = 1, parts = [];
     let t0 = 0, last = 0, skip = false, doneFired = false, maxMech = 0;
     const mouse = { x: -1e5, y: -1e5 };
 
@@ -110,6 +113,11 @@
       if (which !== "first") {
         g.font = `400 ${fs2}px ${O.font}`; g.lineWidth = fs2 * strokeK;
         g.fillText(O.last, nameX, base2); g.strokeText(O.last, nameX, base2);
+        if (!which && O.suffix) {
+          const sx = nameX + g.measureText(O.last).width + fs2 * 0.03, s3 = Math.max(7, fs2 * O.suffixScale);
+          g.font = `400 ${s3}px ${O.font}`; g.lineWidth = s3 * strokeK;
+          g.fillText(O.suffix, sx, base2); g.strokeText(O.suffix, sx, base2);
+        }
       }
       g.restore();
     }
@@ -183,8 +191,10 @@
       base1 = cy - (hEm * fs) / 2 + fs * asc1;
       base2 = base1 + fs * lineGap + fs2 * asc2;
 
-      gap = Math.max(3, fs / 26);
-      gap2 = Math.max(2.5, fs2 / 22);
+      const DENSITY = 1.2;   // more pieces per letter (1 = original)
+      gap = Math.max(2.7, fs / 26 / Math.sqrt(DENSITY));
+      gap2 = Math.max(2.3, fs2 / 22 / Math.sqrt(DENSITY));
+      pieceScale = Math.sqrt(DENSITY);
       hoverR = Math.max(60, fs * 0.5);
 
       const textPts = [
@@ -203,7 +213,7 @@
       gearPts.length = N;
 
       gearR = Rg;
-      const k = Math.min(W, H), margin = k * 0.06;
+      const edge = 8;   // keep pieces just inside the screen border
       const nameW = Math.max(1, Math.max(...textPts.map((q) => q[0])) - nameX);
       parts = textPts.map(([tx, ty, pg], i) => {
         const [gx, gy] = gearPts[i];
@@ -215,9 +225,16 @@
           tx, ty, r0, a0,
           appear: (r0 / Rg) * 0.45 + rand(0, 0.15),
           sizeG: (isWrench ? 1.6 : 1.25) * gGap * rand(0.95, 1.15),
-          sizeT: (isWrench ? 1.7 : 1.3) * pg * rand(0.95, 1.15), pg,
+          sizeT: (isWrench ? 1.7 : 1.3) * pg * pieceScale * rand(0.95, 1.15), pg,
           // scattered spot after the explosion
-          ex: rand(margin, W - margin), ey: rand(margin, H - margin),
+          // flies straight out from its spot on the gear, most pieces ending near the screen border
+          ...(() => {
+            const a = a0 + SPIN_END + rand(-0.6, 0.6), dx = Math.cos(a), dy = Math.sin(a);
+            const tx = dx > 0 ? (W - edge - cx) / dx : dx < 0 ? (edge - cx) / dx : Infinity;
+            const ty = dy > 0 ? (H - edge - cy) / dy : dy < 0 ? (edge - cy) / dy : Infinity;
+            const f = Math.sqrt(Math.random());   // even coverage from the center out to the edges
+            return { ex: cx + dx * Math.min(tx, ty) * f, ey: cy + dy * Math.min(tx, ty) * f };
+          })(),
           // spot on the sphere (unit vector, mostly near the surface)
           ...(() => {
             const z = rand(-1, 1), th = rand(0, Math.PI * 2), q = Math.sqrt(1 - z * z), rf = rand(0.82, 1);
@@ -268,7 +285,7 @@
       }
       const sp = spherePos(p, t);
       if (t < T_GATHER) {
-        const v = clamp01((t - T_EXPLODE) / (T_GATHER - T_EXPLODE));
+        const v = clamp01((t - T_EXPLODE - HOLD) / (T_GATHER - T_EXPLODE - HOLD));
         const e = v < 0.5 ? 4 * v * v * v : 1 - Math.pow(-2 * v + 2, 3) / 2;   // ease in-out
         return [p.ex + (sp[0] - p.ex) * e, p.ey + (sp[1] - p.ey) * e, tum, 1 + (sp[2] - 1) * e];
       }
