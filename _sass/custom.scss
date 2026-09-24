@@ -5,9 +5,9 @@ $text-color: #333;
 
 // Set theme colors based on the color_scheme variable
 @if $color_scheme == 'dark' {
-  $primary-color: #333;
-  $background-color: #000;
-  $text-color: #fff;
+  $primary-color: #0d0f12;
+  $background-color: #0d0f12;
+  $text-color: #ece8df;
 } @else if $color_scheme == 'aqua' {
   $primary-color: #598392;
   $background-color: #eff6e0;
@@ -402,3 +402,66 @@ main hr {
   font-size: 0.9rem;
   color: #dcdcdc;
 }
+
+/* =====================================================================
+   New look: matches the homepage (Ribeye headings, dark background,
+   off-white text, red accents). These rules come last so they win.
+   ===================================================================== */
+:root {
+  --bg: #0d0f12; --fg: #ece8df; --body: #c9ccd1; --muted: #8a939e;
+  --accent: #e0524c; --line: #2a2f36;
+  --display: "Ribeye", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body { background: var(--bg); color: var(--body); font-family: var(--sans); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--display); font-weight: 400; color: var(--fg); }
+strong, b { color: var(--fg); }
+.text-white { color: var(--fg) !important; }
+
+main a:not(.btn):not(.hyperloop-tile):not(.hub-card) { color: var(--accent); }
+main a:not(.btn):not(.hyperloop-tile):not(.hub-card):hover { color: var(--fg); }
+main a.text-white:hover { color: var(--accent) !important; }
+.bi { color: var(--accent); }
+
+/* header: same style as the homepage's top-right menu */
+header.site-header {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  padding: 20px 4vw; margin-bottom: 40px;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+}
+.site-header .brand { font-family: var(--display); font-size: 24px; color: var(--fg); text-decoration: none; }
+.site-header .brand span { color: var(--accent); font-size: 0.45em; margin-left: 1px; }
+.site-header .brand:hover { color: var(--fg); }
+.site-links { display: flex; gap: 24px; }
+.site-links a {
+  font-family: var(--display); font-size: 17px; color: var(--fg); text-decoration: none;
+  border-bottom: 2px solid transparent; transition: color .2s, border-color .2s;
+}
+.site-links a:hover { color: var(--accent); border-color: var(--accent); }
+
+footer.site-footer {
+  background: var(--bg); color: var(--muted); border-top: 1px solid var(--line);
+  padding: 24px 4vw; margin-top: 60px; font-size: 0.9em; text-align: center;
+}
+
+/* buttons, e.g. "View PDF Resume": red outline that fills on hover */
+.btn-light {
+  --bs-btn-bg: transparent; --bs-btn-color: var(--fg); --bs-btn-border-color: var(--accent);
+  --bs-btn-hover-bg: var(--accent); --bs-btn-hover-color: var(--bg); --bs-btn-hover-border-color: var(--accent);
+  --bs-btn-active-bg: var(--accent); --bs-btn-active-color: var(--bg); --bs-btn-active-border-color: var(--accent);
+  border-width: 2px; font-family: var(--display);
+  color: var(--fg);
+}
+.btn-light:hover, .btn-light:focus-visible { color: var(--bg); }
+.btn-light .bi { color: inherit; }
+
+/* project tiles: Ribeye labels, red glow on hover */
+.tile-overlay h5 { font-family: var(--display); font-weight: 400 !important; color: var(--fg) !important; }
+.hyperloop-tile:hover { box-shadow: 0 12px 28px rgba(224, 82, 76, 0.35) !important; }
+.hub-card span { font-family: var(--display); color: var(--fg); }
+
+.border-secondary { border-color: var(--line) !important; }
+main hr { border-top-color: var(--line); }
+.back-arrow { color: var(--accent); font-family: var(--display); font-weight: 400; }
+.back-arrow:hover { color: var(--fg); }
