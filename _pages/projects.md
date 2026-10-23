@@ -37,18 +37,18 @@ permalink: /projects/
       <img src="{{ '/assets/images/hub-machine.jpg' | relative_url }}" alt="Machine Shop">
     </a>
 
+    <a href="{{ '/projects/research/' | relative_url }}" class="hyperloop-tile">
+      <div class="tile-overlay">
+        <h5>Research</h5>
+      </div>
+      <img src="{{ '/assets/images/hub-research.jpg' | relative_url }}" alt="Research">
+    </a>
+
     <a href="{{ '/projects/personal/' | relative_url }}" class="hyperloop-tile">
       <div class="tile-overlay">
         <h5>Personal Projects</h5>
       </div>
       <img src="{{ '/assets/images/hub-personal.jpg' | relative_url }}" alt="Personal Projects">
-    </a>
-
-    <a href="{{ '/projects/all/' | relative_url }}" class="hyperloop-tile">
-      <div class="tile-overlay">
-        <h5>All Projects</h5>
-      </div>
-      <img src="{{ '/assets/images/hub-all.jpg' | relative_url }}" alt="All Projects">
     </a>
   </div>
 </div>
