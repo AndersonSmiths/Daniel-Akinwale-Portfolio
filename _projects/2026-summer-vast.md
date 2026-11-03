@@ -16,8 +16,8 @@ From June to September 2026 I was a Fluids Manufacturing Intern at Vast in Long 
 
 ## Nonconformance
 
-- Served as nonconformance (NC) point of contact for Fluids tube production, supporting NC disposition of flight hardware
+- Supported nonconformance (NC) disposition operations for Fluids tube production using Manufacturo (MES), Siemens NX, and Teamcenter
 
 ## Tube Proofing
 
-- Stood up a new Fluids-dedicated tube-proofing setup, enabling proof testing to higher cleanliness requirements
+- Assisted in standing up a new Fluids-dedicated tube-proofing setup, enabling proof testing to higher cleanliness requirements

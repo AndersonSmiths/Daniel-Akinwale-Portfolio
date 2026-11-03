@@ -2,7 +2,7 @@
 layout: project
 title: ASML Reticle Arm
 description: M.Eng project integrating an ASML reticle handling robot arm
-technologies: [CAD, Optical Safety Light Curtain, Motion-Control Software]
+technologies: [CAD, Optical Safety Light Curtain, Technical Documentation]
 image: /assets/images/asml-reticle-arm.jpg
 category: research
 ---
@@ -17,6 +17,6 @@ For my M.Eng project, sponsored by ASML, I have been working since January 2026 
 
 - Integrating an optical safety light curtain with the ASML sponsor to stop the arm when personnel enter its range of motion
 
-## Controls & Documentation
+## Documentation
 
-- Developing the arm's motion-control software and operator documentation for student use
+- Writing operator documentation to help students learn to use the arm safely
