@@ -52,9 +52,9 @@ Mechanical & aerospace engineer with hands-on experience in flight-hardware manu
   *Fluids Manufacturing Intern*  
   June 2026 - September 2026  
   - Supported orbital tube welding (OTW) for flight-hardware tube production using Manufacturo (MES), Siemens NX, and Teamcenter
-  - Served as nonconformance (NC) point of contact for Fluids tube production, supporting NC disposition of flight hardware
+  - Supported nonconformance (NC) disposition operations for flight-hardware tube production
   - Redesigned the 3D-printed OTW support fixtures, which the team adopted as its standard welding process
-  - Stood up a new Fluids-dedicated tube-proofing setup, enabling proof testing to higher cleanliness requirements
+  - Assisted in standing up a new Fluids-dedicated tube-proofing setup, enabling proof testing to higher cleanliness requirements
 
 - **GlobalFoundries** - Malta, NY  
   *Photolithography Equipment Engineering Intern*  
@@ -83,16 +83,16 @@ Mechanical & aerospace engineer with hands-on experience in flight-hardware manu
   January 2026 - Present  
   - Redesigned the mounting approach and built support structures for an ASML reticle handling robot arm
   - Integrating an optical safety light curtain with the ASML sponsor to stop the arm when personnel enter its range of motion
-  - Developing the arm's motion-control software and operator documentation for student use
+  - Writing operator documentation to help students learn to use the arm safely
 
 ---
 
 #### Leadership Experience
 
-- **Emerson Manufacturing Lab, Cornell University** - Ithaca, NY  
+- **Cornell MAE's Emerson Manufacturing Studio (now Autodesk Design and Make Space)** - Ithaca, NY  
   *Crew Manager*  
   January 2024 - Present  
-  - Designed and deployed structured training and proficiency assessments across CNC (HAAS), mill, lathe, waterjet, and laser cutter
+  - Helped build structured training and proficiency assessments across CNC (HAAS), mill, lathe, waterjet, and laser cutter
   - Improved studio uptime, machine reliability, and safety by specifying replacement tooling and coordinating procurement
 
 - **Cornell Hyperloop (Student Design Team)** - Ithaca, NY  
