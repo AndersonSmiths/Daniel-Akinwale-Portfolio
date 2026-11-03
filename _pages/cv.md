@@ -43,7 +43,7 @@ Mechanical & aerospace engineer with hands-on experience in flight-hardware manu
 #### Work Experience
 
 - **Aerospace ADVERSARY Lab, Cornell University** - Ithaca, NY  
-  *Graduate Researcher*  
+  *AFRL Graduate Researcher*  
   March 2026 - Present  
   - Design CubeSat structures in CAD, including 3D-printed primary structures, for a satellite testbed that evaluates space cybersecurity applications
   - Develop servo-actuated attitude adjustment that points CubeSats at one another for satellite-to-satellite communication
@@ -60,7 +60,7 @@ Mechanical & aerospace engineer with hands-on experience in flight-hardware manu
   *Photolithography Equipment Engineering Intern*  
   June 2025 - August 2025  
   - Accelerated in-line wafer defect detection by retrofitting TEL and SEMES track tools in a 300mm fab with camera/DVR monitoring
-  - Cut part cost and enabled one-person service by redesigning a tool-panel fastener as a 3D-printed magnetic assembly in SolidWorks
+  - Cut part cost and enabled one-person service by redesigning a tool-panel fastener as a 3D-printed magnetic assembly in Fusion 360
 
 - **SRW Engineering & Architecture** - Philadelphia, PA  
   *Mechanical Engineering Intern*  
